@@ -2,7 +2,7 @@
   "name": "cxinsight-frontend-client",
   "version": "1.0.0",
   "private": true,
-  "homepage": "//cxm/client",
+  "homepage": "//cxm",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/jsonwebtoken": "^8.5.0",
