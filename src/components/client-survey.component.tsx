@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 import Modal from 'antd/lib/modal';
 import Button from 'antd/lib/button';
 import Progress from 'antd/lib/progress';
-import qs from 'querystring';
+// import qs from 'querystring';
 
 import '../css/responseweb-base-bundle-min.d03455d7.css';
 import '../css/smlib.surveytemplates-survey_page-bundle-min.74c6465c.css';
@@ -277,10 +277,23 @@ export default class ClientSurvey extends React.Component<IProps, IState> {
         document.body.classList.toggle('survey-body', true);
         document.body.classList.toggle('modern-browser', true);
         
+        console.log(this.props.history.location);
+        console.log(this.props.history.location.search);
+        console.log(this.props.history.location.search.replace('?', ''));
+
+        const paramTk = this.props.history.location.search.replace('?', '').split("=")[1];
+        const paramToken = '';
+        console.log(paramTk);
+        console.log(paramToken);
         // Get the client token key (JWT or Base64) from url
-        const query = qs.parse(this.props.history.location.search.replace('?', ''));
-        const paramTk = query.tk as any;
-        const paramToken = query.token as any;
+        // const query = qs.parse(this.props.history.location.search.replace('?', ''));
+        // console.log('query', query);
+        
+        // const paramTk = query.tk as any;
+        // const paramToken = query.token as any;
+
+        // console.log(paramTk);
+        // console.log(paramToken);
 
         // Exit if not found the token key as a param
         if(!paramTk && !paramToken) return;
@@ -344,7 +357,7 @@ export default class ClientSurvey extends React.Component<IProps, IState> {
         
         this.setState({ isLoading: true });
 
-        const query = qs.parse(this.props.history.location.search.replace('?', ''));
+        // const query = qs.parse(this.props.history.location.search.replace('?', ''));
         const collectorStatus = rp.Data.recordset[0].collector_status;
         const isCutoff = rp.Data.recordset[0].cutoff;
         const cutoff = rp.Data.recordset[0].cutoff_datetime;
