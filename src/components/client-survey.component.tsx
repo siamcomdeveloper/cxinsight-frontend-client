@@ -2509,7 +2509,7 @@ export default class ClientSurvey extends React.Component<IProps, IState> {
         });
 
         if (this.state.isLoading) {
-            return <div id="overlay"><img className="img" style={{ width: '20px' }} src={`/cxm/client/loading.gif`} alt="Loading"/> Loading...</div>
+            return <div id="overlay"><img className="img" style={{ width: '20px' }} src={`/loading.gif`} alt="Loading"/> Loading...</div>
         }
         else if (!this.state.authorized) {
             return  <div><p>status : 403<br></br>Sorry, you are not authorized to access this page.</p></div>
@@ -2529,7 +2529,7 @@ export default class ClientSurvey extends React.Component<IProps, IState> {
                                 { this.state.completionRedirect ?
                                 <div className="clearfix" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
                                     <div className="spin-completion-redirect" style={{ textAlign: 'center' }}>
-                                        <img className="img" style={{ width: '20px' }} src={`/cxm/client/loading.gif`} alt="Loading"/> Redirecting... you to {this.state.completionRedirect}
+                                        <img className="img" style={{ width: '20px' }} src={`/loading.gif`} alt="Loading"/> Redirecting... you to {this.state.completionRedirect}
                                     </div>
                                 </div>
                                 : null }
@@ -2554,7 +2554,7 @@ export default class ClientSurvey extends React.Component<IProps, IState> {
                                     { this.state.completionRedirect ?
                                     <div className="clearfix" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
                                         <div className="spin-completion-redirect" style={{ textAlign: 'center' }}>
-                                            <img className="img" style={{ width: '20px' }} src={`/cxm/client/loading.gif`} alt="Loading"/> Redirecting... you to {this.state.completionRedirect}
+                                            <img className="img" style={{ width: '20px' }} src={`/loading.gif`} alt="Loading"/> Redirecting... you to {this.state.completionRedirect}
                                         </div>
                                     </div>
                                     : null }
@@ -2629,7 +2629,7 @@ export default class ClientSurvey extends React.Component<IProps, IState> {
                             <header className="survey-page-header"></header>
 
                             <div id="overlay" className={ this.state.submitLoading ? '' : 'hidden'}>
-                            <img className="img" style={{ width: '20px' }} src={`/cxm/client/loading.gif`} alt="Loading"/> Submitting...
+                            <img className="img" style={{ width: '20px' }} src={`/loading.gif`} alt="Loading"/> Submitting...
                             </div>
 
                             { (this.state.survey.enable_src_type === 2 && this.state.survey.banner_src) &&

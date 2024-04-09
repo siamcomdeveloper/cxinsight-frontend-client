@@ -404,7 +404,7 @@ class CheckboxQuestion extends React.Component<IProps, IState> {
               {/* <Icon type={this.state.loadingConsentImage ? 'loading' : 'plus'} /> */}
               { this.state.loadingConsentImage ? 
                 <div>
-                  <img className="img" style={{ width: '20px' }} src={`/cxm/platform/loading.gif`} alt="Loading"/>
+                  <img className="img" style={{ width: '20px' }} src={`/loading.gif`} alt="Loading"/>
                   <div className="ant-upload-text">Upload here</div>
                 </div>
               : 

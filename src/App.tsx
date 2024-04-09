@@ -8,7 +8,7 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-      <Router basename={`cxm`}>
+      <Router basename={`cxm/client`}>
           <Switch>
               <Route path='/:xSite/sv' component={ ClientSurvey } />
           </Switch>
